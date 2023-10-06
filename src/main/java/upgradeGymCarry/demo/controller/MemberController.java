@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import upgradeGymCarry.demo.service.MemberService;
+
 @Controller
 public class MemberController {
     private final MemberService memberService;
@@ -17,5 +18,10 @@ public class MemberController {
     @GetMapping("/members/login")
     public String loginForm(){
         return "members/createLoginForm";
+    }
+
+    @GetMapping("/members/join")
+    public String joinForm() {
+        return "members/registerForm";
     }
 }
