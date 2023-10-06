@@ -1,10 +1,10 @@
 package upgradeGymCarry.demo.service;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import upgradeGymCarry.demo.domain.Member;
 import upgradeGymCarry.demo.repository.MemberRepository;
+
 @Service // 빈으로 등록
 public class MemberService {
     private final MemberRepository memberRepository;

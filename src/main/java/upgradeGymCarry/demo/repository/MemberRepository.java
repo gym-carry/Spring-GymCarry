@@ -7,5 +7,5 @@ import upgradeGymCarry.demo.domain.MemberEntity;
 public interface MemberRepository {
     Member insert(MemberEntity memberEntity);
 
-    Member select(Member member);
+    Member select(MemberEntity memberEntity);
 }

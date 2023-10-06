@@ -12,11 +12,13 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED) // 기본 생성자 프로텍티드
 public class MemberEntity {
 
+
     @Id // id를 기본키로 지정
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 기본키를 자동으로 1씩 증가
     @Column(name = "id", updatable = false)
     private Long id;
 
+    @Getter
     @Column(name = "loginId", nullable = false)
     private String loginId;
 
