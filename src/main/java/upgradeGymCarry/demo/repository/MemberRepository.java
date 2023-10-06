@@ -2,7 +2,7 @@ package upgradeGymCarry.demo.repository;
 
 import upgradeGymCarry.demo.domain.Member;
 
-public interface memberRepository {
+public interface MemberRepository {
     Member insert(Member member);
 
     Member select(Member member);

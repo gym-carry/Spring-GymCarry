@@ -1,8 +1,10 @@
 package upgradeGymCarry.demo.repository;
 
+import org.springframework.stereotype.Repository;
 import upgradeGymCarry.demo.domain.Member;
 
-public class JDBCMemberRepository implements memberRepository{
+@Repository
+public class JDBCMemberRepository implements MemberRepository {
     @Override
     public Member insert(Member member) {
         return null;
