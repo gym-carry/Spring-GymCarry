@@ -1,9 +1,11 @@
 package upgradeGymCarry.demo.repository;
 
+import org.springframework.stereotype.Repository;
 import upgradeGymCarry.demo.domain.Member;
+import upgradeGymCarry.demo.domain.MemberEntity;
 
 import javax.persistence.EntityManager;
-
+@Repository
 public class JPAMemberRepository implements MemberRepository{
     private final EntityManager em;
 
@@ -12,9 +14,9 @@ public class JPAMemberRepository implements MemberRepository{
     }
 
     @Override
-    public Member insert(Member member) {
-        em.persist(member);
-        return member;
+    public Member insert(MemberEntity memberEntity) {
+        em.persist(memberEntity);
+        return null;
     }
 
     @Override
