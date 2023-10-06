@@ -17,6 +17,9 @@ public class MemberEntity {
     @Column(name = "id", updatable = false)
     private Long id;
 
+    @Column(name = "loginId", nullable = false)
+    private String loginId;
+
     @Column(name = "name", nullable = false)
     private String name;
 
@@ -29,8 +32,11 @@ public class MemberEntity {
     @Column(name = "phone", nullable = false)
     private String phone;
 
+
+
     @Builder // 빌더 패턴으로 객체 생성
-    public MemberEntity(String name, String pwd, String email, String phone) {
+    public MemberEntity(String loginId, String name, String pwd, String email, String phone) {
+        this.loginId = loginId;
         this.name = name;
         this.pwd = pwd;
         this.email = email;
